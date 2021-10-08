@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ partial "header" . }}
+  </head>
+  <body>
+    {{ partial "topnav" . }} {{ partial "mainnav" . }} {{ if not .IsHome}} {{ end }} {{ block "main" .}}{{ end }} {{ partial "footer" . }}
+  </body>
+</html>

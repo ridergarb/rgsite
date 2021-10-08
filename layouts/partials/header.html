@@ -1,0 +1,26 @@
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Primary Meta Tags -->
+<title>{{ .Title }} - {{ .Site.Title }}</title>
+<meta name="title" content="{{ .Title }} - {{ .Site.Title }}" />
+<!-- <meta name="description" content="{{ .Description }}" /> -->
+<meta name="description" content="{{ if (or (not (isset .Params "description")) (eq .Params.description "")) }} {{ $.Site.Params.description }} {{ else }} {{ .Description }} {{ end }}" />
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Site.BaseURL }}" />
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}" />
+<meta property="og:description" content="{{ if (or (not (isset .Params "description")) (eq .Params.description "")) }} {{ $.Site.Params.description }} {{ else }} {{ .Description }} {{ end }}" />
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.featured_image }}" />
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="{{ .Site.Params.twitter_url }}" />
+<meta property="twitter:title" content="{{ .Title }} - {{ .Site.Title }}" />
+<meta property="twitter:description" content="{{ if (or (not (isset .Params "description")) (eq .Params.description "")) }} {{ $.Site.Params.description }} {{ else }} {{ .Description }} {{ end }}" />
+<meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.featured_image }}" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.2/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/css/rgstyle.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+<link rel="icon" href="" sizes="16x16 32x32" type="image/png" />

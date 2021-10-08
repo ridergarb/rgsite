@@ -1,0 +1,10 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Rider Garb'
+enableRobotsTXT = true
+
+[params]
+    description = "Recommended, best and top Riding Gears for Bikers and Motorcyclists"
+    twitter_url = "https://twitter.com/ridergarb"
+
+
