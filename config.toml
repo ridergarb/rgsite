@@ -7,4 +7,48 @@ enableRobotsTXT = true
     description = "Recommended, best and top Riding Gears for Bikers and Motorcyclists"
     twitter_url = "https://twitter.com/ridergarb"
 
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    startLevel = 1
 
+[menu]
+[[menu.main]]
+  identifier = "home"
+  name = 'Home'
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/'
+  weight = 1
+[[menu.main]]
+  name = 'About'
+  post = ""
+  pre = "<i class='fa fa-road'></i>"
+  url = '/about'
+  weight = 2
+[[menu.main]]
+  name = 'Categories'
+  identifier = "category"
+  post = ""
+  pre = "<i class='fa fa-road'></i>"
+  url = '#'
+  weight = 3
+ [[menu.main]]
+  name = 'Riding'
+  post = ""
+  pre = "<i class='fa fa-road'></i>"
+  url = '/faqs/list-of-basic-riding-gears-every-biker-should-have/'
+  parent = "category"
+  weight = 1
+[[menu.main]]
+  name = 'Blogs'
+  post = ""
+  pre = "<i class='fa fa-road'></i>"
+  url = '/blog'
+  weight = 4
+[[menu.main]]
+  name = 'Faqs'
+  identifier = "faqs"
+  post = "New!"
+  pre = "<i class='fa fa-road'></i>"
+  url = '/faqs'
+  weight = 5

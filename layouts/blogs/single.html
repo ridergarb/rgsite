@@ -1,0 +1,20 @@
+{{ define "main"}}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8 mx-auto my-5">
+      <h5><i class="fas fa-arrow-circle-left me-3 my-3"></i><a href="/blogs">Back To Blogs</a></h5>
+      <h3>{{ .Title }}</h3>
+      <small>
+        <ul class="list-unstyled list-inline py-2"><i class="fas fa-tags me-2"></i>
+          {{ range .Params.tags }}
+          <li class="list-inline-item"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+        {{ end }} 
+        </ul>
+        <div><i class="fas fa-user-edit me-2"></i>By <strong>{{ .Params.author }}</strong> Posted on: {{ dateFormat "2006-01-02 11:11" .Date }}</div>
+      </small>
+      {{ .Content }}
+      <hr>
+    </div>
+  </div>
+</div>
+{{ end }}

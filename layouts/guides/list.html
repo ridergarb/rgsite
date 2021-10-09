@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+
+<div class="container">
+  <div class="row">
+    {{ range .Pages.ByDate.Reverse  }}
+    <div class="col-md-6 col-lg-4 col-xl-3">
+      
+      <!-- card starts -->
+
+      <div class="card-deck my-5">
+        <div class="card text-white bg-dark">
+          <a href="{{ .Permalink }}"><img src="{{ .Params.featured_image }}" class="card-img-top gal_thumb" alt="..." style="height:200px; width:100%;"></a>
+          <div class="card-body">
+            <h5 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+            <small><i class="fas fa-pen-nib me-2 pb-3"></i>{{ dateFormat "2006-Jan-02" .Date }} by {{ .Params.author }}</small>
+            <p class="card-text">{{ .Summary }}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{ range .Params.tags }}
+              <li class="list-inline-item"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+            {{ end }}</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- card ends -->
+
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+
+
+
+{{ end }}

@@ -1,0 +1,13 @@
+{{ define "main"}}
+    
+<div class="container">
+  <div class="row">
+    <div class="col m-5 text-center">
+      <div class="alert alert-danger" role="alert">
+        <h5><strong>Attention:</strong> The page that you were trying to navigate doesn't exists! </h5>
+      </div>
+      <h3 id="title text-dark"><a href="{{ "/" | relURL }}">Go Back to Home Page</a></h3>
+    </div>
+  </div>
+</div>
+{{ end }}
